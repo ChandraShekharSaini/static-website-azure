@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase | Modern Shopping</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <h2 class="logo">Shop<span>Ease.</span></h2>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Shop</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <input type="text" id="searchInput" placeholder="Search products...">
+            <button class="cart-btn" onclick="toggleCart()">
+                🛒 Cart <span id="cartCount">0</span>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p class="tagline">NEW COLLECTION 2026</p>
+        <h1>Upgrade Your<br>Everyday Style.</h1>
+        <p>Discover premium fashion, accessories and lifestyle products.</p>
+        <a href="#products" class="primary-btn">Shop Now →</a>
+    </div>
+    <div class="hero-image"></div>
+</section>
+
+<section class="categories" id="categories">
+    <h2>Explore Categories</h2>
+    <div class="category-list">
+        <button onclick="filterProducts('All')">All</button>
+        <button onclick="filterProducts('Clothing')">Clothing</button>
+        <button onclick="filterProducts('Shoes')">Shoes</button>
+        <button onclick="filterProducts('Accessories')">Accessories</button>
+    </div>
+</section>
+
+<section class="products-section" id="products">
+    <div class="section-heading">
+        <div>
+            <p class="tagline">OUR COLLECTION</p>
+            <h2>Trending Products</h2>
+        </div>
+        <p>Find your perfect style.</p>
+    </div>
+
+    <div class="product-grid" id="productGrid"></div>
+</section>
+
+<section class="banner" id="about">
+    <div>
+        <p>LIMITED TIME OFFER</p>
+        <h2>Get 30% OFF<br>Your First Order</h2>
+        <a href="#products" class="primary-btn">Explore Collection</a>
+    </div>
+</section>
+
+<footer>
+    <h2>ShopEase.</h2>
+    <p>Style meets simplicity. Shop smarter, live better.</p>
+    <p>© 2026 ShopEase. All rights reserved.</p>
+</footer>
+
+<div class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button onclick="toggleCart()">✕</button>
+    </div>
+    <div id="cartItems"></div>
+    <div class="cart-total">
+        <h3>Total: ₹<span id="cartTotal">0</span></h3>
+        <button onclick="checkout()">Checkout</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
